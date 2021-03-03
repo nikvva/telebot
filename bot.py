@@ -3,7 +3,7 @@ import telebot
 from telebot import types
 import mysql.connector
 import random
-
+import os
 from variables import *
 
 
@@ -37,6 +37,7 @@ def find_dishes(kcal_person_min, kcal_person_max, id_person):  # функция 
         bot.send_message(id_person, sorry)  # если блюдо не нашлось, то выводим сообщение о том, что его нет
 
 
+TOKEN = os.environ.get('bot_token')
 bot = telebot.TeleBot(TOKEN)
 d = {}
 
