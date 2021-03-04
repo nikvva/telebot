@@ -22,7 +22,7 @@ def print_dishes(dish, id_person):  # функция отправляет пол
 
 
 def find_dishes(kcal_person_min, kcal_person_max, id_person):  # функция поиска блюда в базе данных по данным критериям
-    connection = mysql.connector.connect(host='localhost', database='12team', user='root', password='')
+    connection = mysql.connector.connect(host='eu-cdbr-west-03.cleardb.net', database='heroku_05c0bf788994a4e ', user='b49a02d4dd4fbd', password='2e7e444c')
     cur = connection.cursor()  # подключились к базе данных
     s = 'SELECT * FROM ' + str(d[id_person].callback)
     cur.execute(s)  # сделали запрос в базу и вывели необходимую таблицу
