@@ -89,8 +89,6 @@ def send_text(message):
         Processing_message(message)
     except KeyError:
         bot.send_message(message.chat.id, sorry_error)
-    else:
-        Processing_message(message)
 
 
 def Processing_message(message):
